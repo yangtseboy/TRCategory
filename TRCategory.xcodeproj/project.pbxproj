@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E86BBA1C39E31BB8FC2D51A /* libPods-TRCategory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4185C2347AB0FCB495A699C5 /* libPods-TRCategory.a */; };
 		299585011F08E8CD001C89C5 /* TRCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299584F71F08E8CD001C89C5 /* TRCategory.framework */; };
 		299585061F08E8CD001C89C5 /* TRCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299585051F08E8CD001C89C5 /* TRCategoryTests.m */; };
 		299585081F08E8CD001C89C5 /* TRCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 299584FA1F08E8CD001C89C5 /* TRCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,9 @@
 		299585001F08E8CD001C89C5 /* TRCategoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRCategoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		299585051F08E8CD001C89C5 /* TRCategoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRCategoryTests.m; sourceTree = "<group>"; };
 		299585071F08E8CD001C89C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CEC64EB74404641AD435995 /* Pods-TRCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRCategory.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRCategory/Pods-TRCategory.release.xcconfig"; sourceTree = "<group>"; };
+		4185C2347AB0FCB495A699C5 /* libPods-TRCategory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRCategory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E68BC0E3F5F686649829926 /* Pods-TRCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRCategory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRCategory/Pods-TRCategory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E86BBA1C39E31BB8FC2D51A /* libPods-TRCategory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 				299584F91F08E8CD001C89C5 /* TRCategory */,
 				299585041F08E8CD001C89C5 /* TRCategoryTests */,
 				299584F81F08E8CD001C89C5 /* Products */,
+				CC14067CAABA7F919BA6FA7D /* Pods */,
+				7C4D44872735695C7A7D3B53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +93,23 @@
 			path = TRCategoryTests;
 			sourceTree = "<group>";
 		};
+		7C4D44872735695C7A7D3B53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4185C2347AB0FCB495A699C5 /* libPods-TRCategory.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC14067CAABA7F919BA6FA7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E68BC0E3F5F686649829926 /* Pods-TRCategory.debug.xcconfig */,
+				2CEC64EB74404641AD435995 /* Pods-TRCategory.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2995850B1F08E8CD001C89C5 /* Build configuration list for PBXNativeTarget "TRCategory" */;
 			buildPhases = (
+				91D1FE0B967A9262ABC90371 /* [CP] Check Pods Manifest.lock */,
 				299584F21F08E8CD001C89C5 /* Sources */,
 				299584F31F08E8CD001C89C5 /* Frameworks */,
 				299584F41F08E8CD001C89C5 /* Headers */,
 				299584F51F08E8CD001C89C5 /* Resources */,
+				F61F508E000E2FDE7802EBB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +217,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91D1FE0B967A9262ABC90371 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F61F508E000E2FDE7802EBB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRCategory/Pods-TRCategory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		299584F21F08E8CD001C89C5 /* Sources */ = {
@@ -319,6 +378,7 @@
 		};
 		2995850C1F08E8CD001C89C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E68BC0E3F5F686649829926 /* Pods-TRCategory.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -337,6 +397,7 @@
 		};
 		2995850D1F08E8CD001C89C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CEC64EB74404641AD435995 /* Pods-TRCategory.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
